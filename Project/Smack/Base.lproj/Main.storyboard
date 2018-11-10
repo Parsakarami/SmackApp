@@ -1,24 +1,100 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="W80-Gd-JMZ" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="xbJ-7x-fL4"/>
+                        <segue destination="jBP-OF-LDH" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="i0b-up-dY0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="239" y="95"/>
+        </scene>
+        <!--ChannelVC-->
+        <scene sceneID="Bcc-du-1yv">
+            <objects>
+                <viewController id="W80-Gd-JMZ" customClass="ChannelVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xqZ-6d-cYe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="WB4-JR-3Rc"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Otz-mQ-GJg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1055" y="-316"/>
+        </scene>
+        <!--ChatVC-->
+        <scene sceneID="X6y-h1-1Ui">
+            <objects>
+                <viewController id="jBP-OF-LDH" customClass="ChatVC" customModule="Smack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Rt-TC-DeD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3OE-jV-5Ti">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zYv-fd-Mmd">
+                                        <rect key="frame" x="12" y="46" width="16" height="22"/>
+                                        <state key="normal" image="hamberger-menu">
+                                            <color key="titleColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Parsa " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tLH-XQ-IV8">
+                                        <rect key="frame" x="159" y="44" width="57.5" height="26.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.59999999999999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="80" id="0rk-dr-0Ly"/>
+                                    <constraint firstItem="zYv-fd-Mmd" firstAttribute="leading" secondItem="3OE-jV-5Ti" secondAttribute="leading" constant="12" id="Dj7-tT-hNa"/>
+                                    <constraint firstItem="tLH-XQ-IV8" firstAttribute="centerY" secondItem="zYv-fd-Mmd" secondAttribute="centerY" id="Llk-ax-oZL"/>
+                                    <constraint firstItem="tLH-XQ-IV8" firstAttribute="centerX" secondItem="3OE-jV-5Ti" secondAttribute="centerX" id="oB7-SK-zvi"/>
+                                    <constraint firstAttribute="bottom" secondItem="zYv-fd-Mmd" secondAttribute="bottom" constant="12" id="v9p-Jp-DA5"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="3OE-jV-5Ti" firstAttribute="leading" secondItem="iua-He-y8Z" secondAttribute="leading" id="Hio-Xx-Nnu"/>
+                            <constraint firstItem="3OE-jV-5Ti" firstAttribute="top" secondItem="8Rt-TC-DeD" secondAttribute="top" id="Wdb-Ry-9Y9"/>
+                            <constraint firstItem="3OE-jV-5Ti" firstAttribute="trailing" secondItem="iua-He-y8Z" secondAttribute="trailing" id="d8z-4L-t9r"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iua-He-y8Z"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuButton" destination="zYv-fd-Mmd" id="KQI-HX-ifk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4ba-bg-Jlx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1053.5999999999999" y="456.52173913043481"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="hamberger-menu" width="16" height="16"/>
+    </resources>
 </document>

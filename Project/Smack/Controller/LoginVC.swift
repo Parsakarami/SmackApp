@@ -18,4 +18,8 @@ class LoginVC: UIViewController {
     @IBAction func closeButtonPressed(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
+    
+    @IBAction func createAccountButtonPressed(_ sender: Any) {
+        performSegue(withIdentifier: To_Create_Account, sender: nil)
+    }
 }

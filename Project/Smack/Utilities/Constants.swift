@@ -9,3 +9,5 @@
 import Foundation
 
 let To_Login = "loginSegue"
+let To_Create_Account = "registerSegue"
+let UNWIND = "unWindToChannel"

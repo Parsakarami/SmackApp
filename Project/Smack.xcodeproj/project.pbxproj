@@ -16,6 +16,7 @@
 		42EF12642191452000C37D25 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EF12622191452000C37D25 /* Main.storyboard */; };
 		42EF12662191452000C37D25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 42EF12652191452000C37D25 /* Assets.xcassets */; };
 		42EF12692191452000C37D25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 42EF12672191452000C37D25 /* LaunchScreen.storyboard */; };
+		42F58071219A764D00CE5A3F /* CreateAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F58070219A764D00CE5A3F /* CreateAccountVC.swift */; };
 		42F75C832199EBA5003A0E30 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F75C822199EBA5003A0E30 /* Constants.swift */; };
 		42F75C8D2199F303003A0E30 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42F75C8C2199F303003A0E30 /* LoginVC.swift */; };
 /* End PBXBuildFile section */
@@ -31,6 +32,7 @@
 		42EF12652191452000C37D25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		42EF12682191452000C37D25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		42EF126A2191452000C37D25 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		42F58070219A764D00CE5A3F /* CreateAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountVC.swift; sourceTree = "<group>"; };
 		42F75C822199EBA5003A0E30 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		42F75C8C2199F303003A0E30 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		42FCA57021914BFF00423545 /* Smack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smack-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 				421315A6219684B2009E847E /* ChatVC.swift */,
 				421315A8219684CC009E847E /* ChannelVC.swift */,
 				42F75C8C2199F303003A0E30 /* LoginVC.swift */,
+				42F58070219A764D00CE5A3F /* CreateAccountVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -269,6 +272,7 @@
 			files = (
 				421315A7219684B2009E847E /* ChatVC.swift in Sources */,
 				421315A9219684CC009E847E /* ChannelVC.swift in Sources */,
+				42F58071219A764D00CE5A3F /* CreateAccountVC.swift in Sources */,
 				42F75C8D2199F303003A0E30 /* LoginVC.swift in Sources */,
 				428F8DF82197D5BE00253E43 /* GradientView.swift in Sources */,
 				42EF125F2191452000C37D25 /* AppDelegate.swift in Sources */,

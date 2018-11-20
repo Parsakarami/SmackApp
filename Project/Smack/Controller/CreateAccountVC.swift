@@ -16,6 +16,9 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var emailText: UITextField!
     @IBOutlet weak var userImage: UIImageView!
     
+    var avatarName = "defualt"
+    var avatarColor = "[0.5,0.5,0.5,1]"
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,8 +32,8 @@ class CreateAccountVC: UIViewController {
     @IBAction func pickBGColor(_ sender: Any) {
     }
     @IBAction func CreateAccount(_ sender: Any) {
+        guard let user = usernameText.text, usernameText.text != "" else { return }
         guard let email = emailText.text, emailText.text != "" else { return }
-        
         guard let password = passwordText.text,  passwordText.text != "" else { return }
         
         AuthService.Instance.RegisterUser(email: email, password: password)
@@ -39,6 +42,11 @@ class CreateAccountVC: UIViewController {
               AuthService.Instance.Login(email: email, password: password, completion: {(loginSuccess) in
                 if loginSuccess{
                     print("the user logged in! token : \(AuthService.Instance.authToken)")
+                    AuthService.Instance.CreateUser(name: user, email: email, avatarName: self.avatarName, avatarColor: self.avatarColor, completion: {(success) in
+                        if  success {
+                            self.performSegue(withIdentifier: UNWIND, sender: nil)
+                        }
+                    })
                 }
               })
             }else{

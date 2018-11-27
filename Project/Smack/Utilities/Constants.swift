@@ -19,6 +19,7 @@ let URL_USER_ADD = "\(BASE_URL)user/add"
 //Segues
 let To_Login = "loginSegue"
 let To_Create_Account = "registerSegue"
+let To_Pick_Avatar = "pickAvatarSegue"
 let UNWIND = "unWindToChannel"
 
 //Auth
